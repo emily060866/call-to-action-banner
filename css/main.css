@@ -1,101 +1,69 @@
 html {
   box-sizing: border-box;
-  line-height: 1.5;
+
+  font: normal 100%/1.5 sans-serif;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-img {
-  width: 100%;
-}
-
-h2 {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
+body {
   margin: 0;
-  line-height: 1.37;
-  max-width: 90%;
-
-}
-
-p {
-  font-family: Roboto, sans-serif;
-  margin: 0;
-  margin-bottom: 1em;
-  padding-top: .1em;
-  font-size: 1.5rem;
-  max-width: 95%;
-}
-
-a {
-  font-family: Roboto, sans-serif;
-  padding: 1em;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.img-flex {
-  width: 100%;
-  display: block;
+  min-width: 320px;
 }
 
 .banner {
-  position: relative;
-  overflow: hidden;
-  max-height: 500px;
-  align-items: center;
-  justify-content: center;
+  background-color: #2b3851;
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 
-.items {
-  display: flex;
-  justify-content: space-around;
+.robot {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  position: relative;
+}
+
+.robot-body {
+  width: 320px;
+  margin-top: 2.5em;
+}
+
+.robot-brain {
+  width: 46px;
   position: absolute;
-  bottom: 0;
-  top: 7%;
+  top: 16%;
   left: 50%;
   transform: translateX(-50%);
-  padding-bottom: 5em;
-  max-width: 45em;
-  width: 100%;
-  align-items: flex-start;
 }
 
-.icon {
-  display: flex;
-  margin-top: .6em;
-  width: 60%;
-  align-items: flex-start;
+.robot-head-right,
+.robot-head-left {
+  width: 125px;
 }
 
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 1.125rem;
-  padding: .3em .75em;
-  border-radius: 8px;
-  background-color: #333;
-  color: #fff;
+.robot-head-left {
+  position: absolute;
+  top: 0;
+  left: 12%;
 }
 
-.btn-big {
-  font-size: 1.5rem;
+.robot-head-right {
+  position: absolute;
+  top: 0;
+  right: 12%;
 }
 
-.btn:hover {
-  background-color: #000;
+.robot:hover > .robot-head-left {
+  top: 0;
+  left: 0;
 }
 
-body {
-  margin: 0;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 3em;
+.robot:hover > .robot-head-right {
+  top: 0;
+  right: 0;
 }
